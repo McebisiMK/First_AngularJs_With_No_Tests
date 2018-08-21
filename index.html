@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Greetings</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/directives.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/filters.js"></script>
+</head>
+
+<body>
+    <div ng-app="demoApp" ng-controller="mainController">
+        <form ng-submit="addUser()">
+            <input type="text" ng-model="person.firstName" placeholder="Give me a first name...">
+            <input type="text" ng-model="person.lastName" placeholder="Give me a last name...">
+            <button type="submit">ADD</button>
+        </form>
+        <div ng-repeat="person in people | sortByLastName">
+            <say-hello message="Good Day,"></say-hello>
+        </div>
+    </div>
+</body>
+
+</html>
